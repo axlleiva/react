@@ -3,7 +3,7 @@ const array=[{
     title:'Pikachu',
     description:'electrico',
     price:100,
-    pictureUrl:'../../../public/logo192.png'},{
+    pictureUrl:'../../public/logo512.png'},{
     id:'dos',
     title:'Charmander',
     description:'Fuego',

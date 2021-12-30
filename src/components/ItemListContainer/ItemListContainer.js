@@ -1,6 +1,8 @@
 import React from 'react'
 import { useState , useEffect } from 'react'
 import {getfetch} from '../../helpers/mock'
+import Item from './Item'
+
 
 function ItemListContainer(props){
 
@@ -25,7 +27,11 @@ function ItemListContainer(props){
             <h1>{greeting}</h1>
             {loading ? <h1>Loading....</h1>
             :
-            array.map(client=> <li key={client.id}> {client.title} </li>)}
+            array.map(client=> 
+            <div>
+                <Item key={client.id}/>
+
+            </div>)}
             
         </div>
     )
