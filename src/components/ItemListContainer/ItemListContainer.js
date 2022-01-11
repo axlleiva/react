@@ -1,24 +1,23 @@
-import React from 'react'
-import { useState , useEffect } from 'react'
-import {getfetch} from '../../helpers/mock'
-import Item from './Item'
-
+import React from 'react';
+import { useState , useEffect } from 'react';
+import {getfetch} from '../../helpers/mock';
+import ItemList from './ItemList';
 
 function ItemListContainer(props){
 
-    const [array, setarray] = useState([])
+    const [data, setdata] = useState([])
     const [loading, setloading] = useState(true)
 
     useEffect(() => {
         getfetch
-        .then(resp=>setarray(resp))
+        .then(resp=>setdata(resp))
         .catch(err=>console.log(err))
         .finally(()=>setloading(false))
         
     }, [])
     
     
-    console.log(array)
+    console.log(data)
 
     const {greeting} = props
     
@@ -27,11 +26,7 @@ function ItemListContainer(props){
             <h1>{greeting}</h1>
             {loading ? <h1>Loading....</h1>
             :
-            array.map(client=> 
-            <div>
-                <Item key={client.id}/>
-
-            </div>)}
+            <ItemList productos={data} />}
             
         </div>
     )

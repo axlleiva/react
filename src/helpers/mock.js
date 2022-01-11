@@ -1,9 +1,9 @@
-const array=[{
+export const array=[{
     id:'uno',
     title:'Pikachu',
     description:'electrico',
     price:100,
-    pictureUrl:'../../public/logo512.png'},{
+    pictureUrl:'../../public/logopokemon.jfif'},{
     id:'dos',
     title:'Charmander',
     description:'Fuego',
