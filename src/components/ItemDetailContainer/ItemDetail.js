@@ -7,7 +7,7 @@ const ItemDetail = ({producto}) => {
     return (
         <div>
             <Card style={{ width: '18rem' }}>
-                <Card.Img variant="top" src="holder.js/100px180?text=Image cap" />
+                <Card.Img variant="top" src={producto.pictureUrl} />
                 <Card.Body>
                     <Card.Title>{producto.title} </Card.Title>
                     <Card.Text>

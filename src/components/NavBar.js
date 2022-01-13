@@ -1,6 +1,7 @@
 import React from 'react'
 import { Navbar , Nav , Container } from 'react-bootstrap';
 import Cartwidget from './CartWidget.js'
+import { Link } from 'react-router-dom';
 
 
 
@@ -12,9 +13,9 @@ const NavBar = () => {
             <img src='./logopokemon.jfif' alt="" style={{heith:'100px', width:'100px'}} />
             <Navbar.Brand href="#home">PokeShopping</Navbar.Brand>
             <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#features">Features</Nav.Link>
-            <Nav.Link href="#pricing">Pricing</Nav.Link>
+            <Link to='/'>Home</Link>
+            <Link to='/detalle/detalle'>Detalle</Link>
+            <Link to='/precio/precio'>Precio</Link>
             </Nav>
         </Container>    
             <Nav.Link href="#carrito"><Cartwidget/></Nav.Link>

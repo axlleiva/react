@@ -11,12 +11,13 @@ function App() {
   return (
     <BrowserRouter className="App">
       <NavBar/>
-      <ItemDetailContainer/>
+      
       <Routes>
         <Route exact path='/' element={<ItemListContainer greeting='Bienvenido , compra pokemons para tus batallas' />} />
-        <Route exact path='/detalle' element={<ItemCount min ={1} max={10} />} />
-
+        <Route exact path='/precio/:precioId' element={<ItemCount min ={1} max={10} />} />
+        <Route exact path='/detalle/:detalleId' element={<ItemDetailContainer/>} />
       </Routes>
+      
     
     </BrowserRouter>
   );
