@@ -1,6 +1,6 @@
 import React ,{useState} from 'react'
 
-const ItemCount = ({min , max}) => {
+const ItemCount = ({min , max ,onAdd}) => {
 
     
 
@@ -17,6 +17,7 @@ const ItemCount = ({min , max}) => {
     <div >
       <h1> {counter} </h1>
         <button onClick={incrementer}>+</button>
+        <button onClick={ () => onAdd(counter)}>Agregar al Carrito</button>
         <button onClick={decremento}>-</button>
     </div>
   )

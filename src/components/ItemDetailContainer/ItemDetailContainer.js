@@ -7,7 +7,7 @@ import ItemDetail from './ItemDetail';
 const ItemDetailContainer = () => {
     const[producto , setproducto]= useState({})
 
-    const {detalleId} =useParams
+    const {detalleId} =useParams()
 
     useEffect (() => {
         getfetch

@@ -9,7 +9,7 @@ function ItemListContainer(props){
     const [data, setdata] = useState([])
     const [loading, setloading] = useState(true)
 
-    const {categoriaId} = useParams
+    const {categoriaId} = useParams()
 
     useEffect(() => {
         if(categoriaId){

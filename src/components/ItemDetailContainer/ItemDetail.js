@@ -1,9 +1,21 @@
-import React from 'react'
+import React ,{useState} from 'react'
 import Card from 'react-bootstrap/Card';
 import { ListGroup } from 'react-bootstrap';
 import { ListGroupItem } from 'react-bootstrap';
+import ItemCount from '../itemCount';
+import { Link } from 'react-router-dom';
+
 
 const ItemDetail = ({producto}) => {
+
+    const [show,setshow]= useState(true)
+    
+    const onAdd = (counter)=>{
+    setshow(false)
+
+
+    }
+
     return (
         <div>
             <Card style={{ width: '18rem' }}>
@@ -11,17 +23,17 @@ const ItemDetail = ({producto}) => {
                 <Card.Body>
                     <Card.Title>{producto.title} </Card.Title>
                     <Card.Text>
-                    Some quick example text to build on the card title and make up the bulk of
-                    the card's content.
+                    {producto.description}
                     </Card.Text>
                 </Card.Body>
                 <ListGroup className="list-group-flush">
-                    <ListGroupItem>Cras justo odio</ListGroupItem>
-                    <ListGroupItem>Dapibus ac facilisis in</ListGroupItem>
-                    <ListGroupItem>Vestibulum at eros</ListGroupItem>
+                    <ListGroupItem>Debilidad: { producto.debilidad} </ListGroupItem>
+                    <ListGroupItem>{producto.tipo}</ListGroupItem>
+                    <ListGroupItem> {producto.price} </ListGroupItem>
                 </ListGroup>
                 <Card.Body>
-                    <Card.Link href="#">Card Link</Card.Link>
+                    {show ? <ItemCount min ={1} max={10} onAdd={onAdd} /> : <Link to='/'><button>ir al carrito</button></Link>}
+                    
                     <Card.Link href="#">Another Link</Card.Link>
                 </Card.Body>
             </Card>
