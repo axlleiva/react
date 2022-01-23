@@ -4,13 +4,17 @@ import { ListGroup } from 'react-bootstrap';
 import { ListGroupItem } from 'react-bootstrap';
 import ItemCount from '../itemCount';
 import { Link } from 'react-router-dom';
+import { useCartContext } from '../context/cartContext';
 
 
 const ItemDetail = ({producto}) => {
 
+    
+    const {agregarAlCarrito }=useCartContext()
     const [show,setshow]= useState(true)
     
     const onAdd = (counter)=>{
+        agregarAlCarrito({...producto,cantidad:counter})
     setshow(false)
 
 

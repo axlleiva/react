@@ -14,7 +14,7 @@ const NavBar = () => {
             <Navbar.Brand href="#home">PokeShopping</Navbar.Brand>
             <Nav className="me-auto">
             <Link to='/'>Home</Link>
-            <Link to='/detalle/detalle'>Detalle</Link>
+            
             <Link to='/precio/precio'>Precio</Link>
             </Nav>
         </Container>    
