@@ -18,7 +18,7 @@ const NavBar = () => {
             <Link to='/precio/precio'>Precio</Link>
             </Nav>
         </Container>    
-            <Nav.Link href="#carrito"><Cartwidget/></Nav.Link>
+            <Nav.Link href="/cart"><Cartwidget/></Nav.Link>
     </Navbar>
   )
 }

@@ -4,7 +4,7 @@ import { ListGroup } from 'react-bootstrap';
 import { ListGroupItem } from 'react-bootstrap';
 import ItemCount from '../itemCount';
 import { Link } from 'react-router-dom';
-import { useCartContext } from '../context/cartContext';
+import { useCartContext } from '../context/CartContext';
 
 
 const ItemDetail = ({producto}) => {
@@ -36,9 +36,17 @@ const ItemDetail = ({producto}) => {
                     <ListGroupItem> {producto.price} </ListGroupItem>
                 </ListGroup>
                 <Card.Body>
-                    {show ? <ItemCount min ={1} max={10} onAdd={onAdd} /> : <Link to='/'><button>ir al carrito</button></Link>}
+                    {show ? <ItemCount min ={1} max={10} onAdd={onAdd} /> : <Link to="/cart">
+                                <button className="detail">
+                                    Ir al carrito
+                                </button>
+                            </Link>}
                     
-                    <Card.Link href="#">Another Link</Card.Link>
+                            <Link to="/">
+                                <button className="detail">
+                                    Volver al inicio
+                                </button>
+                            </Link>
                 </Card.Body>
             </Card>
             
