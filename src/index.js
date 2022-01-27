@@ -3,6 +3,18 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { initializeApp } from 'firebase/app';
+
+const firebaseConfig = {
+  apiKey: "AIzaSyCeik_4h5CuqHGACbNFIX8rsrmgIY3ohww",
+  authDomain: "e-commerce-e0dcf.firebaseapp.com",
+  projectId: "e-commerce-e0dcf",
+  storageBucket: "e-commerce-e0dcf.appspot.com",
+  messagingSenderId: "782801519999",
+  appId: "1:782801519999:web:79f341659e16fff27d864a",
+  measurementId: "G-CQKQRVFDPC"
+};
+initializeApp(firebaseConfig);
 
 ReactDOM.render(
   <React.StrictMode>
